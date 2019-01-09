@@ -1,29 +1,77 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import('./static/data/products.json').then(json => ...)
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+
+class SizeFilter extends React.Component{
+	render(){
+		return(
+		<div>
+			Filter By Size
+		< /div>
+		)
+	}
 }
 
-export default App;
+class NumProdsNotif extends React.Component{
+	render(){
+		return(
+		<div>
+			17 Products Found
+		</div>
+		)
+	}
+}
+
+class Cart extends React.Component{
+	render(){
+		return(
+		<div>
+			Cart
+		</div>
+		)
+	}
+}
+
+class OrderBy extends React.Component{
+	render(){
+		return(
+		<div>
+			Order By
+		</div>
+		)
+	}
+}
+
+class Products extends React.Component{
+	render(){
+		return(
+		<div>
+			Products
+		</div>
+		)
+	}
+}
+
+
+
+//Everything Contained on this Page
+class FullPage extends React.Component{
+	render(){
+		return (
+		<div>
+			<SizeFilter />
+			<NumProdsNotif />
+			<Cart />
+			<OrderBy />
+			//<Products products={this.props.products} />
+			<Products />
+		</div>
+
+			);
+	}
+}
+
+
+
+export default FullPage; 
